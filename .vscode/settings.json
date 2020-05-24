@@ -1,0 +1,70 @@
+{
+    /* Programming Langauge-Specific Settings */
+    // Shell
+    "[shellscript]": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    "[dockerfile]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "foxundermoon.shell-format"
+    },
+    /// Linting
+    "shellcheck.enable": true,
+    "shellcheck.executablePath": "/home/ahellwig/.local/bin/shellcheck",
+    "shellcheck.useWorkspaceRootAsCwd": true,
+    "shellcheck.customArgs": [
+        "--color=auto",
+        "--shell=bash",
+        "--external-sources"
+        // "--source-path=lib/lib.sh"
+    ],
+    /// Formatting
+    "shellformat.path": "/home/ahellwig/go/bin/shfmt",
+    "shellformat.flag": "-ln bash -i 2 -bn -ci -sr",
+    "shellformat.effectLanguages": [
+        "shellscript",
+        "dockerfile",
+        "dotenv",
+        "hosts",
+        "jvmoptions",
+        "ignore",
+        "gitignore",
+        "properties",
+        "spring-boot-properties",
+        "azcli"
+    ],
+    /* Global Settings */
+    // Editor
+    "editor.colorDecorators": true,
+    "editor.fontLigatures": true,
+    "editor.fontFamily": "'Fira Code', Consolas, 'Courier New', monospace",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        80,
+        100,
+        120
+    ],
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "editor.wordWrap": "off",
+    // Files
+    "files.associations": {
+        "${workspaceFolder/bin/**": "shellscript"
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true
+    },
+    // Spell Checker
+    "cSpell.enabled": false
+}
